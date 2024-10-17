@@ -1,0 +1,9 @@
+/* CSS for PanoptoVideoXBlock */
+
+.panopto_video_block .count {
+    font-weight: bold;
+}
+
+.panopto_video_block p {
+    cursor: pointer;
+}
