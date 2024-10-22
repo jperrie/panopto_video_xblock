@@ -1,0 +1,13 @@
+setup.py
+panopto_video/__init__.py
+panopto_video/panopto_video.py
+panopto_video/static/README.txt
+panopto_video/static/css/panopto_video.css
+panopto_video/static/html/panopto_video.html
+panopto_video/static/js/src/panopto_video.js
+panopto_video_xblock.egg-info/PKG-INFO
+panopto_video_xblock.egg-info/SOURCES.txt
+panopto_video_xblock.egg-info/dependency_links.txt
+panopto_video_xblock.egg-info/entry_points.txt
+panopto_video_xblock.egg-info/requires.txt
+panopto_video_xblock.egg-info/top_level.txt
