@@ -4,7 +4,7 @@ from importlib.resources import files
 
 from web_fragments.fragment import Fragment
 from xblock.core import XBlock
-from xblock.fields import Integer, Scope, String
+from xblock.fields import Integer, Scope
 
 
 class PanoptoVideoXBlock(XBlock):
@@ -16,7 +16,7 @@ class PanoptoVideoXBlock(XBlock):
     # self.<fieldname>.
 
     # TO-DO: delete count, and define your own fields.
-    video_url = String(help="The URL for the Panopto video.", default="")
+    video_url = ""
 
     def resource_string(self, path):
         """Handy helper for getting resources from our kit."""
