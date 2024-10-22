@@ -4,7 +4,7 @@ from importlib.resources import files
 
 from web_fragments.fragment import Fragment
 from xblock.core import XBlock
-from xblock.fields import Integer, Scope
+from xblock.fields import Integer, Scope, String
 
 
 class PanoptoVideoXBlock(XBlock):
