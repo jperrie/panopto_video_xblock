@@ -4,14 +4,14 @@ from importlib.resources import files
 
 from web_fragments.fragment import Fragment
 from xblock.core import XBlock
-from xblock.fields import Integer, Scope
+from xblock.fields import Integer, Scope, String
 
 
 class PanoptoVideoXBlock(XBlock):
     """
     TO-DO: document what your XBlock does.
     """
-
+    video_url = String(help="The URL for the Panopto video.", default="")
     # Fields are defined on the class.  You can access them in your code as
     # self.<fieldname>.
 
