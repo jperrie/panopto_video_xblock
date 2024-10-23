@@ -16,16 +16,16 @@ class PanoptoVideoXBlock(XBlock):
     # self.<fieldname>.
 
     # TO-DO: delete count, and define your own fields.
-    video_url = ""
 
     # TO-DO: change this view to display your data your own way.
     def student_view(self, context=None):
         html = f"""
             <div>
-                <iframe src="{self.video_url}" width="640" height="360" allowfullscreen></iframe>
+                <iframe src="" width="640" height="360" allowfullscreen></iframe>
             </div>
         """
-        return html
+        frag = Fragment(html)
+        return frag
 
     # TO-DO: change this to create the scenarios you'd like to see in the
     # workbench while developing your XBlock.
