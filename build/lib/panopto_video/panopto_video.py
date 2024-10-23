@@ -21,11 +21,27 @@ class PanoptoVideoXBlock(XBlock):
     def student_view(self, context=None):
         html = f"""
             <div>
-                <iframe src="" width="640" height="360" allowfullscreen></iframe>
+                <iframe src="{self.video_url}" width="640" height="360" allowfullscreen></iframe>
             </div>
         """
         frag = Fragment(html)
         return frag
+    
+    def studio_view(self, context=None):
+        """
+        Define the editor interface for editing the XBlock in the Studio.
+        """
+        html = f"""
+            <div>
+                <label for="video_url">Video URL:</label>
+                <input type="text" name="video_url" value="{self.video_url}" />
+                <button class="save-button">Save</button>
+            </div>
+        """
+        fragment = Fragment(html)
+        fragment.add_javascript(self.resource_string("static/js/src/panopto_edit.js"))
+        fragment.initialize_js('PanoptoVideoXBlock')
+        return fragment
 
     # TO-DO: change this to create the scenarios you'd like to see in the
     # workbench while developing your XBlock.
