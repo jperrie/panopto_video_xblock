@@ -5,6 +5,7 @@ panopto_video/static/README.txt
 panopto_video/static/css/panopto_edit.css
 panopto_video/static/css/panopto_video.css
 panopto_video/static/html/panopto_video.html
+panopto_video/static/js/src/panopto_edit.js
 panopto_video/static/js/src/panopto_video.js
 panopto_video_xblock.egg-info/PKG-INFO
 panopto_video_xblock.egg-info/SOURCES.txt
