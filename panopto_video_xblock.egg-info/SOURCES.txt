@@ -2,6 +2,7 @@ setup.py
 panopto_video/__init__.py
 panopto_video/panopto_video.py
 panopto_video/static/README.txt
+panopto_video/static/css/panopto_edit.css
 panopto_video/static/css/panopto_video.css
 panopto_video/static/html/panopto_video.html
 panopto_video/static/js/src/panopto_video.js
