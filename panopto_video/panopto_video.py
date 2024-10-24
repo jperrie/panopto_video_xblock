@@ -6,12 +6,18 @@ from xblock.core import XBlock
 from xblock.fields import String
 from web_fragments.fragment import Fragment
 
+import pkg_resources
 
 class PanoptoVideoXBlock(XBlock):
     """
     XBlock for embedding a Panopto video using a URL provided by the user.
     """
     video_url = String(help="The URL for the Panopto video.", default="")
+
+    def resource_string(self, path):
+        """Helper function for getting resource content from files."""
+        data = pkg_resources.resource_string(__name__, path)
+        return data.decode("utf8")
 
     # Display the Panopto video in the student view
     def student_view(self, context=None):
