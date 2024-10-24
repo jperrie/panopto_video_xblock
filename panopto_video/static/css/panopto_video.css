@@ -1,9 +1,26 @@
-/* CSS for PanoptoVideoXBlock */
-
-.panopto_video_block .count {
-    font-weight: bold;
+.panopto-edit-block {
+    padding: 15px;
 }
 
-.panopto_video_block p {
+.panopto-edit-block label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.panopto-edit-block input[type="text"] {
+    width: 300px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.panopto-edit-block button {
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
     cursor: pointer;
+}
+
+.panopto-edit-block button:hover {
+    background-color: #45a049;
 }

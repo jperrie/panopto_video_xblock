@@ -1,22 +1,26 @@
-/* Javascript for PanoptoVideoXBlock. */
 function PanoptoVideoXBlock(runtime, element) {
+    var $ = window.jQuery;
 
-    function updateCount(result) {
-        $('.count', element).text(result.count);
-    }
-
-    var handlerUrl = runtime.handlerUrl(element, 'increment_count');
-
-    $('p', element).click(function(eventObject) {
+    function saveVideoUrl() {
+        var videoUrl = $('#video_url_input').val();
+        
+        var handlerUrl = runtime.handlerUrl(element, 'save_video_url');
+        
         $.ajax({
             type: "POST",
             url: handlerUrl,
-            data: JSON.stringify({"hello": "world"}),
-            success: updateCount
+            data: JSON.stringify({video_url: videoUrl}),
+            success: function(response) {
+                if (response.result === "success") {
+                    alert("Video URL saved successfully.");
+                } else {
+                    alert("Failed to save the Video URL.");
+                }
+            }
         });
-    });
+    }
 
-    $(function ($) {
-        /* Here's where you'd do things on page load. */
+    $(function() {
+        $('#save_button').click(saveVideoUrl);
     });
 }

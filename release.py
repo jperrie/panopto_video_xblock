@@ -20,8 +20,8 @@ def rebuild_folders():
 def push_to_github(user, password, message):
     subprocess.run(["git", "add", "."], check=True)
     subprocess.run(["git", "commit", "-m", message], check=True)
-    subprocess.run(["git", "push", "https://{}:{}@github.com/jperrie/panopto_video_xblock.git".format(user, password)], check=True)
-    print("Pushed changes to GitHub.")
+    #subprocess.run(["git", "push", "https://{}:{}@github.com/jperrie/panopto_video_xblock.git".format(user, password)], check=True)
+    print("Please Push the changes to GitHub.")
 
 # Function to update Tutor configuration
 def update_tutor_config():
@@ -46,7 +46,7 @@ def main():
 
     push_to_github(args.user, args.password, args.message)
 
-    update_tutor_config()
+    #update_tutor_config()
 
 if __name__ == '__main__':
     main()
